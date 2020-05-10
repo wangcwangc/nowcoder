@@ -2,16 +2,12 @@ package 剑指offer;
 
 public class 连续子数组的最大和 {
     public int FindGreatestSumOfSubArray(int[] array) {
-        int res = array[0];
-        int max = array[0];
+        int result = array[0];
+        int maxSub = array[0];
         for (int i = 1; i < array.length; i++) {
-            if (res >= 0)
-                res += array[i];
-            else
-                res = array[i];
-            if (res > max)
-                max = res;
+            maxSub = Math.max(maxSub + array[i], array[i]);
+            result = Math.max(maxSub, result);
         }
-        return max;
+        return result;
     }
 }
