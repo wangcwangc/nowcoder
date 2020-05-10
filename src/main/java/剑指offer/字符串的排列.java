@@ -29,9 +29,4 @@ public class 字符串的排列 {
         }
         return result;
     }
-
-    public static void main(String[] args) {
-        字符串的排列 a = new 字符串的排列();
-        System.out.println(a.Permutation("aab"));
-    }
 }
